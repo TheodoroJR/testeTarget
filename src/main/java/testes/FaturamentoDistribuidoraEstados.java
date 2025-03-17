@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FaturamentoDistribuidoraEstados {
 
         public static void main(String[] args) {
-            // Dados do faturamento diário
+
             List<Double> faturamento = Arrays.asList(
                     22174.1664, 24537.6698, 26139.6134, 0.0, 0.0, 26742.6612, 0.0, 42889.2258, 46251.174, 11191.4722,
                     0.0, 0.0, 3847.4823, 373.7838, 2659.7563, 48924.2448, 18419.2614, 0.0, 0.0, 35240.1826,
@@ -22,9 +22,9 @@ public class FaturamentoDistribuidoraEstados {
             double soma = 0;
             int diasComFaturamento = 0;
 
-            // Encontrar menor e maior faturamento, além da soma para a média
+
             for (double valor : faturamento) {
-                if (valor > 0) { // Ignorar dias sem faturamento
+                if (valor > 0) {
                     if (valor < menor) {
                         menor = valor;
                     }
@@ -39,14 +39,14 @@ public class FaturamentoDistribuidoraEstados {
             double media = soma / diasComFaturamento;
             int diasAcimaDaMedia = 0;
 
-            // Contar dias com faturamento acima da média
+
             for (double valor : faturamento) {
                 if (valor > media) {
                     diasAcimaDaMedia++;
                 }
             }
 
-            // Exibir resultados
+
             System.out.println("Menor faturamento: " + menor);
             System.out.println("Maior faturamento: " + maior);
             System.out.println("Número de dias com faturamento acima da média: " + diasAcimaDaMedia);

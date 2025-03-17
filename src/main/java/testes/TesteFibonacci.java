@@ -9,7 +9,7 @@ public class TesteFibonacci {
         System.out.print("Informe um número: ");
         int numero = scanner.nextInt();
 
-        if (isFibonacci(numero)) {
+        if (teste(numero)) {
             System.out.println(numero + " pertence à sequência de Fibonacci.");
         } else {
             System.out.println(numero + " NÃO pertence à sequência de Fibonacci.");
@@ -18,7 +18,7 @@ public class TesteFibonacci {
         scanner.close();
     }
 
-    public static boolean isFibonacci(int num) {
+    public static boolean teste(int num) {
         if (num == 0 || num == 1) {
             return true;
         }
